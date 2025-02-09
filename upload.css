@@ -1,0 +1,245 @@
+body {
+    background-color: rgba(44, 47, 49, 0.384) !important;
+    background-image: none !important;  /* Remove any existing background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+.upload-section {
+    margin-top: 20px;
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff7e5f;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-btn:hover {
+    background-color: #e76b50;
+}
+
+/* Image Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Style for feed posts */
+.post-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for preview container */
+#previewContainer {
+    max-height: 300px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#previewImage, #previewVideo {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+/* Make containers full-width */
+.post-container {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Layout for Multiple Photos */
+.media-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Auto-adjust */
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Fixed size for images & videos */
+.media-container img,
+.media-container video {
+    width: 100%;
+    height: 150px; /* Fixed height */
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Preview images in a row */
+#previewContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* Lightbox (Big Image View) */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#lightbox img, #lightbox video {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    margin-left: 20px;
+   
+}
+
+#lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Scrollable Preview Container */
+#previewContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Horizontal scrolling */
+    max-height: 200px; /* Limit height */
+    gap: 8px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Ensure images & videos fit */
+.preview-item {
+    flex: 0 0 auto;
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-item img,
+.preview-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* Tag Selection Styling */
+#tagContainer label {
+    cursor: pointer;
+    user-select: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+#tagContainer input:checked + label {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Media Styling */
+.media-item {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-item img,
+.media-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Fullscreen Image Viewer */
+.fullscreen-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.fullscreen-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Style for the dropdown button */
+#tagDropdown {
+    width: 50%;
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+    width: 10%;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Style for each dropdown item (checkbox labels) */
+.tag-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Style for the checkbox (hidden but functional) */
+.tag-checkbox:checked + label {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Improve the spacing */
+.tag-label input {
+    margin-right: 8px;
+}
+
