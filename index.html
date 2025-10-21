@@ -113,7 +113,7 @@
 
     submitBtn.addEventListener("click", () => {
         const code = Array.from(otpInputs).map(input => input.value).join("");
-        if (code === "00000") {
+        if (code === "000000") {
             window.location.href = "upload.html";
             otpInputs.forEach(input => input.value = "");
             otpInputs[0].focus();
@@ -140,4 +140,5 @@
     
    
     
+
 </html>
